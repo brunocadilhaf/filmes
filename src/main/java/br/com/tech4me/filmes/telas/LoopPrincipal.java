@@ -7,6 +7,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.data.repository.Repository;
 import org.springframework.stereotype.Component;
 
+import br.com.tech4me.filmes.repositorios.FilmeRepositorio;
+
 @Component
 public class LoopPrincipal {
     @Autowired
@@ -41,7 +43,8 @@ public class LoopPrincipal {
                     
                     break;
                 case 3:
-                   
+                    tela = new TelaListarFilmes();
+                    repositorio = context.getBean(FilmeRepositorio.class);
                     break;
                 case 0:
                     System.out.println("Fim do programa!");
